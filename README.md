@@ -78,3 +78,22 @@ server {
   }
 }
 ```
+mysqldump -u username -p dbname > dbexport.sql
+
+mysqldump -uroot -p root YourDatabaseName > WantedSQLFile.sql
+
+
+
+Type the following command to import sql data file:
+
+$ mysql -u username -p -h localhost DATA-BASE-NAME < data.sql
+In this example, import 'data.sql' file into 'blog' database using vivek as username:
+
+$ mysql -u vivek -p -h localhost blog < data.sql
+If you have a dedicated database server, replace localhost hostname with with actual server name or IP address as follows:
+
+$ mysql -u username -p -h 202.54.1.10 databasename < data.sql
+To export a database, use the following:
+
+mysqldump -u username -p databasename > filename.sql
+Note the < and > symbols in each case.
